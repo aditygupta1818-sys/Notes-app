@@ -32,18 +32,18 @@ const App = () => {
     }
 
     return (
-        <div className='min-h-screen bg-gray-900 py-10 flex flex-col justify-center items-center'>
+        <div className='min-h-screen bg-gray-900 px-4 py-10 flex flex-col justify-center items-center'>
 
-            <div className='bg-pink-300 w-125 flex flex-col rounded-2xl text-center gap-2 px-10 py-10'>
+            <div className='bg-pink-300 w-full max-w-xl flex flex-col rounded-2xl text-center gap-2 px-5 py-8 shadow-lg'>
 
-                <h1 className='text-5xl mb-10 text-gray-800'>Notes</h1>
+                <h1 className='text-3xl md:text-5xl mb-10 text-gray-800'>Notes</h1>
 
                 <input
                     type="text"
                     placeholder='Enter title'
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
-                    className='p-3 w-full border border-black bg-white rounded-xl'
+                    className='p-3 w-full border border-black bg-white outline-none rounded-xl'
                 />
 
                 <br />
@@ -52,7 +52,7 @@ const App = () => {
                     placeholder='Enter description'
                     value={desc}
                     onChange={(e) => setDesc(e.target.value)}
-                    className='resize-none w-full rounded-xl p-5 h-50 overflow-hidden bg-white'
+                    className='resize-none w-full  rounded-xl p-3 border border-bl h-40 outline-none bg-white'
                 />
 
                 <br />
@@ -87,7 +87,7 @@ const App = () => {
                             </p>
 
                             <button
-                                className='bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-xl'
+                                className='bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg'
                                 onClick={() => deleteNote(detail.id)}
                             >
                                 Delete
